@@ -1,0 +1,205 @@
+/* Variables Globales de Diseño */
+:root {
+  --principal: #17365d;
+  --secundario: #2f75b5;
+  --fondo: #f5f7fa;
+  --blanco: #ffffff;
+  --texto: #202020;
+  --borde: #d9d9d9;
+}
+
+/* Reset y Reglas Generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--secundario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header y Navegación */
+header {
+  background-color: var(--principal);
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+/* Secciones Generales */
+.seccion {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--blanco);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.seccion h2 {
+  color: var(--principal);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secundario);
+  padding-bottom: 0.3rem;
+}
+
+/* Sección Hero / Inicio */
+.seccion-hero {
+  background-color: var(--principal);
+  color: var(--blanco);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero-contenido h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.frase-profesional {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.boton-cta {
+  display: inline-block;
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.boton-cta:hover {
+  background-color: #1f5689;
+  text-decoration: none;
+}
+
+/* Sobre Mí */
+.sobre-mi-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secundario);
+}
+
+.bio {
+  flex: 1;
+}
+
+/* Tarjetas de Proyectos */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.imagen-proyecto {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Habilidades y Contacto */
+.lista-habilidades, .lista-contacto {
+  list-style: square;
+  padding-left: 1.5rem;
+}
+
+.lista-habilidades li, .lista-contacto li {
+  margin-bottom: 0.5rem;
+}
+
+/* Pie de Página */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--principal);
+  color: var(--blanco);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Adaptación Responsiva Básica */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav ul {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sobre-mi-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+}
